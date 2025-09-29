@@ -15,7 +15,7 @@ export const App = () => {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/conduct" element={<ConductPage />} /> 
+          <Route path="/conduct" element={<ConductPage />} />
           <Route path="/schedule" element={<SchedulePage />} />
           <Route path="/jammers" element={<JammerPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
