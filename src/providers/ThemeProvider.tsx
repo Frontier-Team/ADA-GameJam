@@ -33,7 +33,7 @@ const globalStyles = css`
     font-display: swap;
   }
 
-  /* Bold face for headings */
+
   @font-face {
     font-family: "GT Ultra";
   src: url(${normalisedBase}fonts/GTUltraMedian-Bold.otf) format("opentype");
@@ -65,7 +65,6 @@ const globalStyles = css`
     letter-spacing: 1px;
   }
 
-  /* Regular text elements */
   p,
   a {
     font-family: "GT Ultra", sans-serif;
