@@ -47,13 +47,13 @@ export const NavBar: React.FC = () => {
     };
   }, []);
 
-  const links = [
-    { to: "/schedule", label: "Schedule" },
-    { to: "/speakers", label: "Agenda" },
-    { to: "/expo", label: "Expo" },
-    { to: "/people-adventure", label: "People Adventure" },
-    // { to: "https://ivrgame.netlify.app", label: "IVR Game" },
-  ];
+const links = [
+  { to: "/schedule", label: "Schedule" },
+  { to: "/jammers", label: "Game Jam" },
+  { to: "/resources", label: "Resources" },
+  { to: "/conduct", label: "Conduct" },
+  { to: "/accessibility", label: "Accessibility" },
+];
 
   return ( 
     <NavContainer>
