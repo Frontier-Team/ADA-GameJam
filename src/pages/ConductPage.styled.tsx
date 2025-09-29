@@ -30,6 +30,6 @@ export const SubTitle = styled.h2`
 `;
 
 export const Highlight = styled.span`
-  font-weight: bold;
+  font-weight: 400;
   color: ${({ theme }) => theme.colors.lilacShade};
 `;

@@ -136,7 +136,7 @@ export const SidebarItem = styled.li`
 export const SidebarLink = styled(Link)`
   color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: "GT Ultra", sans-serif;
   letter-spacing: 1px;
   font-size: 1.5rem;
   padding: 0.5rem 1rem;

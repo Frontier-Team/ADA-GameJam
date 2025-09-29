@@ -19,7 +19,7 @@ export default function ResourcesPage() {
       [topicId]: !prev[topicId],
     }));
   };
- 
+
   const filteredTutorials = data.tutorials.filter((tutorial) => {
     if (activeFilter === "all") return true;
     return tutorial.type === activeFilter;
@@ -214,7 +214,7 @@ const TemplateRepoButton = styled.a`
   background-color: ${({ theme }) => theme.colors.lilacShade};
   color: white;
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: 400;
   text-align: center;
   text-decoration: none;
   border-radius: 8px;

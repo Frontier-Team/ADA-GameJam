@@ -13,8 +13,8 @@ const AccordionTitle = styled.button`
   text-align: left;
   padding: 1rem;
   font-size: 1.25rem;
-  font-weight: bold;
-  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 400;
+  font-family: "GT Ultra", sans-serif;
   letter-spacing: 1px;
   background: ${({ theme }) => theme.colors.grey};
   border: none;

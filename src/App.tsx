@@ -20,7 +20,7 @@ export const App = () => {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/conduct" element={<ConductPage />} />
+          <Route path="/conduct" element={<ConductPage />} /> 
           <Route path="/schedule" element={<SchedulePage />} />
           <Route path="/accessibility" element={<AccessibilityPage />} />
           <Route path="/speakers" element={<TalkAgendaPage />} />
