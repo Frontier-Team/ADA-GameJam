@@ -1,15 +1,15 @@
-import { Heading, Paragraph } from '../styles/sharedStyles';
+import { FaHandshake, FaHeart, FaRecycle, FaRocket, FaUsers } from 'react-icons/fa';
+import { Heading } from '../styles/sharedStyles';
 import {
+  BottomParagraph,
+  ConductParagraph,
   Content,
   Highlight,
+  Icon,
   Section,
   SubTitle,
   ValueCard,
-  Icon,
-  ConductParagraph,
-  BottomParagraph,
 } from './ConductPage.styled';
-import { FaUsers, FaRecycle, FaHandshake, FaRocket, FaHeart } from 'react-icons/fa';
 
 export const ConductPage: React.FC = () => {
   return (
@@ -17,11 +17,11 @@ export const ConductPage: React.FC = () => {
       <Section>
         <Heading>Code of Conduct</Heading>
 
-        <Paragraph>
+        <ConductParagraph>
           We aim to provide a friendly and supportive environment for all 
           attendees. Please follow this Code of Conduct to ensure everyone 
           gets the most from the day.
-        </Paragraph>
+        </ConductParagraph>
 
         <SubTitle>Please follow the Lloyds Banking Group values</SubTitle>
 
@@ -34,7 +34,7 @@ export const ConductPage: React.FC = () => {
         </ValueCard>
 
         <ValueCard>
-          <Icon aria-label='reduce, reuse, recycle icon'><FaRecycle /></Icon>
+          <Icon aria-label='reduce, reuse, recycle icon'><FaRecycle/></Icon>
           <ConductParagraph>
             <Highlight>Sustainable</Highlight> 
             Don't throw away reusable giveaway items - if you don't need or want it,

@@ -24,9 +24,10 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  margin-top: 1.5rem;
+  margin-top: 1.3rem;
   margin-bottom: 1.2rem;
   font-weight: bold;
+  text-align: center;
 `;
 
 export const ConductParagraph = styled.p`
@@ -36,6 +37,10 @@ export const ConductParagraph = styled.p`
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const BottomParagraph = styled(ConductParagraph)`
