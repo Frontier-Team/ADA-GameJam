@@ -52,10 +52,10 @@ export const NavBar: React.FC = () => {
     { to: "/speakers", label: "Agenda" },
     { to: "/expo", label: "Expo" },
     { to: "/people-adventure", label: "People Adventure" },
-    { to: "https://ivrgame.netlify.app", label: "IVR Game" },
+    // { to: "https://ivrgame.netlify.app", label: "IVR Game" },
   ];
 
-  return (
+  return ( 
     <NavContainer>
       {activeTab !== "/" && (
         <HomeIcon href="/ADA-GameJam/" onClick={() => setActiveTab("/")}>

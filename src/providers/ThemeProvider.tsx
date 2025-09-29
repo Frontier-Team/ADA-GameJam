@@ -1,7 +1,7 @@
 import { Global, ThemeProvider, css } from "@emotion/react";
 import React from "react";
 
-export const theme = {
+const theme = {
   colors: {
     teal: "#006A4D",
     white: "#FFFFFF",
@@ -20,7 +20,28 @@ export const theme = {
   },
 };
 
-export const globalStyles = css`
+
+const base = import.meta.env.BASE_URL || "/";
+const normalisedBase = base.endsWith("/") ? base : `${base}/`;
+
+const globalStyles = css`
+  @font-face {
+    font-family: "GT Ultra";
+  src: url(${normalisedBase}fonts/GTUltra-Light.otf) format("opentype");
+  font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+
+  @font-face {
+    font-family: "GT Ultra";
+  src: url(${normalisedBase}fonts/GTUltraMedian-Bold.otf) format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
   html,
   body,
   #root {
@@ -29,7 +50,8 @@ export const globalStyles = css`
   }
 
   body {
-    font-family: "Courier New", Courier, monospace;
+  font-family: "GT Ultra", "Inter", "Courier New", Courier, monospace;
+  font-weight: 400;
   }
 
   h1,
@@ -37,9 +59,16 @@ export const globalStyles = css`
   h3,
   h4,
   h5,
-  h6,
+  h6 {
+  font-family: "GT Ultra", sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  p,
   a {
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: "GT Ultra", sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
   }
 `;

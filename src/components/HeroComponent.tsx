@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
-import logoOptimized from "../assets/ELT.gif";
+import logoOptimized from "../assets/ELT.gif"; //Needs updated with new logo for ADA
 
 export default function HeroComponent() {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
