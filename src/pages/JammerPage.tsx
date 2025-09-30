@@ -10,6 +10,8 @@ import {
   SubHeading,
 } from "../styles/sharedStyles";
 import { JudgingContainer, PrizesContainer } from "./JammerPage.styled";
+import { TemplateRepoButton, TemplateSection } from "./ResourcesPage";
+import scoringPdf from '../assets/GameJamScoring.pdf';
 
 export const JammerPage: React.FC = () => {
   const jammer = db.jammers[0];
@@ -47,9 +49,16 @@ export const JammerPage: React.FC = () => {
             </Accordion>
           ))}
         </JudgingContainer>
+        <TemplateSection>
+          <Paragraph>{jammer.judgingCriteria.criteriaDescription}</Paragraph>
+          <TemplateRepoButton href={scoringPdf} target="_blank" rel="noopener noreferrer">
+            Download Criteria
+          </TemplateRepoButton>
+        </TemplateSection>
       </>
       <>
         <h2>Winners</h2>
+        <Paragraph>{jammer.Awards.description}</Paragraph>
         <PrizesContainer>
           {jammer.Awards.awards.map((award, index) => (
             <StyledCard key={index}>

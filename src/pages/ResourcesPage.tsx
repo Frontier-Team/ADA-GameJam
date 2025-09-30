@@ -185,7 +185,7 @@ const Wrapper = styled.div`
   margin: auto;
 `;
 
-const TemplateSection = styled.div`
+export const TemplateSection = styled.div`
   padding: 2rem;
   border-radius: 12px;
   background-color: ${({ theme }) => theme.colors.teal};
@@ -207,10 +207,10 @@ const TemplateSection = styled.div`
   }
 `;
 
-const TemplateRepoButton = styled.a`
+export const TemplateRepoButton = styled.a`
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: ${({ theme }) => theme.colors.lavenderPurple};
+  background-color: ${({ theme }) => theme.colors.lilacShade};
   color: white;
   font-size: 1.2rem;
   font-weight: 400;

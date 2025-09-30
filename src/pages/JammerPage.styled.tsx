@@ -16,4 +16,5 @@ export const JudgingContainer = styled.div`
   flex-direction: column;
   gap: 1rem;
   margin: -0.5rem;
+  margin-bottom: 2rem;
 `;

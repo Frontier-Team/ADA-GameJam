@@ -361,14 +361,16 @@
             "description": "There is a challenge to solve, but it's up to you and your team on how you approach it. Does your game fit with the theme? Is your concept unique?"
           },
           {
-            "title": "Learning & Adaptability",
-            "description": "Whether you're a first-timer or seasoned pro, there's always something new to learn. Did you try out a new skill or go out of your comfort zone? Did your team adapt and improve as the day went on?"
+            "title": "Feasibility & Viability",
+            "description": "As we will take the winning idea forward, it's important for us to consider how realistic the solution is. Could this be built, supported and scaled within LBG? Does your game consider existing LBG technlogies, platforms and hosting capabilities?"
           },
           {
             "title": "Technical Execution & Polish",
             "description": "While the focus is on the process, we still want to showcase technical excellence. Does your game run smoothly? Are there any bugs? Have you solved a tricky technical problem?"
           }
-        ]
+        ],
+  
+        "criteriaDescription": "If you would like a more detailed breakdown of the judging criteria, you can download it below."
       },
       "Pitches": {
         "title": "Pitches",
@@ -379,6 +381,7 @@
         "judgeTime": "Pitches to the judges will begin at 2:00pm"
       },
       "Awards": {
+        "description": "The winning teams will be announced at the end of day two, with prizes as follows:",
         "awards": [
           {
             "title": "🥇 1st Place",
