@@ -393,7 +393,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   justify-content: center;
   align-items: center;
 `,pS=U.h1`
-  font-size: 2.8rem;
+  font-size: 2rem;
   color: white;
   margin-bottom: 1rem;
   animation: ${wg} 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s;
@@ -437,9 +437,6 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   }
   transition: transform 0.3s ease-in-out;
 
-  &:hover {
-    transform: scale(1.1);
-  }
 `,yS=U.div`
   position: absolute;
   bottom: 10px;
