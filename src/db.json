@@ -17,7 +17,9 @@
       "name": "Daria Naidonova",
       "occupation": "Student",
       "details": "Studying Experience Design (BDes Hons) at University of Dundee",
-      "contact": ["Instagram - https://www.instagram.com/naidenovka007"],
+      "contact": [
+        "Instagram - https://www.instagram.com/naidenovka007"
+      ],
       "isFilterable": true
     },
     {
@@ -48,7 +50,9 @@
       "name": "Amy Rodger",
       "occupation": "Design Researcher",
       "details": "Researching at Scottish Widows",
-      "contact": ["LinkedIn - https://www.linkedin.com/in/amyrodgercs"],
+      "contact": [
+        "LinkedIn - https://www.linkedin.com/in/amyrodgercs"
+      ],
       "isFilterable": true
     },
     {
@@ -56,7 +60,9 @@
       "name": "Yi Han",
       "occupation": "Interaction Designer",
       "details": "Designing at Scottish Widows",
-      "contact": ["LinkedIn - https://www.linkedin.com/in/yiiihan"],
+      "contact": [
+        "LinkedIn - https://www.linkedin.com/in/yiiihan"
+      ],
       "isFilterable": true
     },
     {
@@ -155,35 +161,47 @@
       "id": 1,
       "time": "09:30",
       "topic": "Welcome and the Game Plan ahead!",
-      "speakers": ["Derek Shanks"],
+      "speakers": [
+        "Derek Shanks"
+      ],
       "location": "St Giles"
     },
     {
       "id": 2,
       "time": "09:40",
       "topic": "Beginning of the People Adventure",
-      "speakers": ["Rose Ulldemolins", "Nick Grant"],
+      "speakers": [
+        "Rose Ulldemolins",
+        "Nick Grant"
+      ],
       "location": "St Giles"
     },
     {
       "id": 3,
       "time": "09:55",
       "topic": "Strategic Update",
-      "speakers": ["Amit Thawani"],
+      "speakers": [
+        "Amit Thawani"
+      ],
       "location": "St Giles"
     },
     {
       "id": 4,
       "time": "10:25",
       "topic": "IVR Game",
-      "speakers": ["Nick Grant"],
+      "speakers": [
+        "Nick Grant"
+      ],
       "location": "St Giles"
     },
     {
       "id": 5,
       "time": "10:35",
       "topic": "GCOO Sustainability - Kettle v Logon",
-      "speakers": ["Derek Shanks", "Iain Frame"],
+      "speakers": [
+        "Derek Shanks",
+        "Iain Frame"
+      ],
       "location": "St Giles"
     },
     {
@@ -197,28 +215,38 @@
       "id": 7,
       "time": "11:20",
       "topic": "Strategic Update",
-      "speakers": ["Amit Thawani"],
+      "speakers": [
+        "Amit Thawani"
+      ],
       "location": "St Giles"
     },
     {
       "id": 8,
       "time": "11:55",
       "topic": "IVR Game",
-      "speakers": ["Nick Grant", "Rose Ulldemolins"],
+      "speakers": [
+        "Nick Grant",
+        "Rose Ulldemolins"
+      ],
       "location": "St Giles"
     },
     {
       "id": 9,
       "time": "12:05",
       "topic": "Quantum Computing",
-      "speakers": ["Professor Simon Gay, University of Glasgow"],
+      "speakers": [
+        "Professor Simon Gay, University of Glasgow"
+      ],
       "location": "St Giles"
     },
     {
       "id": 10,
       "time": "12:50",
       "topic": "Continuing the People Adventure",
-      "speakers": ["Rose Ulldemolins", "Nick Grant"],
+      "speakers": [
+        "Rose Ulldemolins",
+        "Nick Grant"
+      ],
       "location": "St Giles"
     },
     {
@@ -232,14 +260,18 @@
       "id": 12,
       "time": "13:45",
       "topic": "Transition to Dunedin for Expo",
-      "speakers": ["All"],
+      "speakers": [
+        "All"
+      ],
       "location": "Dunedin"
     },
     {
       "id": 13,
       "time": "13:50",
       "topic": "Waterfront Expo",
-      "speakers": ["Waterfront Various Colleagues"],
+      "speakers": [
+        "Waterfront Various Colleagues"
+      ],
       "location": "Dunedin"
     },
     {
@@ -253,59 +285,65 @@
       "id": 15,
       "time": "14:50",
       "topic": "Waterfront Expo",
-      "speakers": ["Waterfront Various Colleagues"],
+      "speakers": [
+        "Waterfront Various Colleagues"
+      ],
       "location": "Dunedin"
     },
     {
       "id": 16,
       "time": "15:40",
       "topic": "Transition back to St Giles from Expo",
-      "speakers": ["All"],
+      "speakers": [
+        "All"
+      ],
       "location": "St Giles"
     },
     {
       "id": 17,
       "time": "15:45",
       "topic": "Results of People Adventure and IVR Game",
-      "speakers": ["Rose Ulldemolins", "Nick Grant"],
+      "speakers": [
+        "Rose Ulldemolins",
+        "Nick Grant"
+      ],
       "location": "St Giles"
     },
     {
       "id": 18,
       "time": "15:55",
       "topic": "Agentic AI",
-      "speakers": ["Aritra Chakravarty"],
+      "speakers": [
+        "Aritra Chakravarty"
+      ],
       "location": "St Giles"
     },
     {
       "id": 19,
       "time": "16:55",
       "topic": "Close",
-      "speakers": ["Amit Thawani", "Derek Shanks"],
+      "speakers": [
+        "Amit Thawani",
+        "Derek Shanks"
+      ],
       "location": "St Giles"
     },
     {
       "id": 20,
       "time": "17:00",
       "topic": "Social",
-      "speakers": [""],
+      "speakers": [
+        ""
+      ],
       "location": "Canongate"
     }
   ],
   "jammers": [
     {
       "welcome": "Hello Jammers! 👋",
-      "welcomeDescription": "Here are some details of what to expect on the day. We can't wait to see what you create!",
+      "welcomeDescription": "Here are some details about what you will be doing at the game jam. We can't wait to see what you create!",
       "challengeTitle": "The Challenge",
-      "challengeDescription": "Your team will create a game based on a theme that will be announced at the start of the Game Jam. You can use any tools or technology you like.",
-      "internalColleagues": "For internal employee teams",
-      "challengeInternal": "Make learning about what Scottish Widows offers engaging and interactive by using games or gamification to captivate the right generation at the right time.",
-      "challengeInternalDescriptor": "On the 3rd March you'll be randomly given one of the following topics:",
-      "internalTopics": " • Investments\n • Budgeting and Finance Essentials\n • Life Insurance or Critical Illness\n • Insurance - Pet, Car or Home\n • Building Your Pension \n • Accessing your Pension",
-      "externalColleagues": "For external student teams",
-      "challengeExternal": "Make a 'Game for Good' to help tackle something that matters to you. Choose from : ",
-      "externalTopics": " • Social Justice, Inclusion and Equality\n • Skills and Talent Development\n • Environment and Climate Change",
-      "externalDescriptor": "We'd love to work together to bring these ideas to life alongside the Scottish Tech Army and really make a difference.",
+      "challengeDescription": "Create a game or gamified journey to help close the gender gap in pensions and investments.",
       "judgingTitle": "Judging Criteria",
       "judgingDescription": "Our judges will be considering the following when casting their vote: ",
       "judgingCriteria": {
@@ -323,43 +361,43 @@
             "description": "There is a challenge to solve, but it's up to you and your team on how you approach it. Does your game fit with the theme? Is your concept unique?"
           },
           {
-            "title": "Learning & Adaptability",
-            "description": "Whether you're a first-timer or seasoned pro, there's always something new to learn. Did you try out a new skill or go out of your comfort zone? Did your team adapt and improve as the day went on?"
+            "title": "Feasibility & Viability",
+            "description": "As we will take the winning idea forward, it's important for us to consider how realistic the solution is. Could this be built, supported and scaled within LBG? Does your game consider existing LBG technlogies, platforms and hosting capabilities?"
           },
           {
             "title": "Technical Execution & Polish",
             "description": "While the focus is on the process, we still want to showcase technical excellence. Does your game run smoothly? Are there any bugs? Have you solved a tricky technical problem?"
           }
-        ]
+        ],
+        "criteriaDescription": "If you would like a more detailed breakdown of the judging criteria, you can download it below."
       },
       "Pitches": {
         "title": "Pitches",
-        "description": "All teams will have the opportunity to give a 5 minute pitch of their game to the judges.",
-        "time": "Pitches will start at 3:20pm in the :",
-        "locationInternal": "Robertson Learning Studio",
-        "locationExternal": "Weston Learning Studio",
-        "presentation": "You can use slides, a live demo, or any other format you like to present your game. Be creative and have fun!"
+        "description": "On day two, all teams will pitch their game to their assigned coaches. Coaches will then shortlist teams to present to our judging panel.",
+        "length": "Each pitch should be 8 minutes, with an additional 2 minutes for questions.",
+        "presentation": "You can use slides, a live demo, or any other format you like to present your game. Be creative and have fun!",
+        "coachTime": "Pitches to the coaches will begin at 12:30pm",
+        "judgeTime": "Pitches to the judges will begin at 2:00pm"
       },
       "Awards": {
+        "description": "The winning teams will be announced at the end of day two, with prizes as follows:",
         "awards": [
           {
-            "title": "🥇 1st Prize\n(Judge's Choice)",
+            "title": "🥇 1st Place",
             "prizes": {
-              "all": "A team mystery Geek Crate with 10 - 15 items and :",
-              "Internal": " Microsoft Innovation Hub visit.",
-              "External": "Game Maker License for each team member."
+              "all": "You will be invited to LBG to bring your idea to life in the Scottish Widows App.\n\n Each team member will receive 1-2-1 mentorship from a Women ConnecTech mentor.\n\n Plus tickets to our Reboot conference in November."
             }
           },
           {
-            "title": "🥈 2nd Prize\n(Audience Choice)",
+            "title": "🥈 2nd Place",
             "prizes": {
-              "all": "A team mystery Geek Crate with 10 - 15 items."
+              "all": "Your team will receive career workshops and tickets to our Reboot conference in November."
             }
           },
           {
-            "title": "🥉 3rd Prize\n(Judge's Choice)",
+            "title": "🥉 3rd Place",
             "prizes": {
-              "all": "A team mystery Geek Crate with 6 - 10 items."
+              "all": "Your team will receive career workshops"
             }
           }
         ]
@@ -369,136 +407,94 @@
   "resources": [
     {
       "id": "r1",
-      "title": "Unity Engine",
-      "type": "Game Engines",
-      "description": "A versatile and widely-used game engine suitable for both 2D and 3D games development.",
+      "title": "Unity",
+      "type": "Games tools",
+      "description": "Create 2D and 3D games with a large ecosystem and asset store.",
       "link": "https://unity.com/download"
     },
     {
       "id": "r2",
-      "title": "Unreal Engine",
-      "type": "Game Engines",
-      "description": "Known for its high-quality graphics and powerful tools, ideal for 3D games.",
-      "link": "https://www.unrealengine.com/en-US/download"
-    },
-    {
-      "id": "r3",
-      "title": "Game Maker Studio",
-      "type": "Game Engines",
-      "description": "Great for 2D game development with a user-friendly interface.",
+      "title": "Game Maker",
+      "type": "Games tools",
+      "description": "Beginner-friendly tool for building 2D games quickly.",
       "link": "https://gamemaker.io/en/download"
     },
     {
-      "id": "r4",
+      "id": "r3",
       "title": "Godot",
-      "type": "Game Engines",
-      "description": "An open-source game engine that supports both 2D and 3D game development.",
+      "type": "Games tools",
+      "description": "Open‑source engine for 2D/3D with an easy scene system.",
       "link": "https://godotengine.org/"
     },
     {
+      "id": "r4",
+      "title": "Rive",
+      "type": "Design tools",
+      "description": "Real‑time vector animation tool for apps and games.",
+      "link": "https://rive.app/"
+    },
+    {
       "id": "r5",
-      "title": "Aseprite",
-      "type": "Art Tools",
-      "description": "A pixel art tool for creating 2D sprites and animations.",
-      "link": "https://www.aseprite.org/"
+      "title": "Figma",
+      "type": "Design tools",
+      "description": "Collaborative UI design and prototyping platform.",
+      "link": "https://www.figma.com/"
     },
     {
       "id": "r6",
-      "title": "GIMP",
-      "type": "Art Tools",
-      "description": "A free and open-source image editor, similar to Adobe Photoshop.",
-      "link": "https://www.gimp.org/downloads/"
+      "title": "Canva",
+      "type": "Design tools",
+      "description": "Easy graphic design for presentations, posters and assets.",
+      "link": "https://www.canva.com/"
     },
     {
       "id": "r7",
-      "title": "Krita",
-      "type": "Art Tools",
-      "description": "A professional, free and open-source painting program.",
-      "link": "https://krita.org/en/download/"
+      "title": "VS Code - React",
+      "type": "IDE's",
+      "description": "Lightweight editor ideal for React development.",
+      "link": "https://code.visualstudio.com/"
     },
     {
       "id": "r8",
-      "title": "Blender",
-      "type": "Art Tools",
-      "description": "A free and open-source 3D modelling, sculpting and animation software.",
-      "link": "https://www.blender.org/download/"
+      "title": "Rider - Unity",
+      "type": "IDE's",
+      "description": "JetBrains IDE with deep Unity integration and tooling.",
+      "link": "https://www.jetbrains.com/rider/"
     },
     {
       "id": "r9",
-      "title": "Audacity",
-      "type": "Audio",
-      "description": "A free, open-source audio editor and recorder.",
-      "link": "https://www.audacityteam.org/download/"
+      "title": "Android Studio",
+      "type": "IDE's",
+      "description": "Official Android IDE for building and testing Android apps.",
+      "link": "https://developer.android.com/studio"
     },
     {
       "id": "r10",
-      "title": "Bfxr",
-      "type": "Audio",
-      "description": "A tool for creating sound effects, especially for retro style games.",
-      "link": "https://www.bfxr.net/"
+      "title": "Xcode",
+      "type": "IDE's",
+      "description": "Apple's IDE for iOS, iPadOS and macOS development.",
+      "link": "https://developer.apple.com/xcode/"
     },
     {
       "id": "r11",
-      "title": "LMMS",
-      "type": "Audio",
-      "description": "A free digital audio workstation for music production.",
-      "link": "https://lmms.io/download#windows"
-    },
-    {
-      "id": "r12",
-      "title": "Visual Studio Code",
-      "type": "Programming & Scripting",
-      "description": "A popular code editor with support for many programming languages.",
-      "link": "https://code.visualstudio.com/download"
-    },
-    {
-      "id": "r13",
-      "title": "Sublime Text",
-      "type": "Programming & Scripting",
-      "description": "A sophisticated text editor for code, markup and prose.",
-      "link": "https://www.sublimetext.com/download"
-    },
-    {
-      "id": "r14",
       "title": "Github",
-      "type": "Programming & Scripting",
-      "description": "A platform for version control and collaboration on code.",
+      "type": "Additional tools",
+      "description": "Version control and collaboration platform for code.",
       "link": "https://github.com/"
     },
     {
-      "id": "r15",
-      "title": "Kenney.nl",
-      "type": "Assets Resources",
-      "description": "Offers a wide range of free game assets, incuding sprites, audio and 3D models.",
-      "link": "https://kenney.nl/"
+      "id": "r12",
+      "title": "Miro",
+      "type": "Additional tools",
+      "description": "Online whiteboard for brainstorming, mapping and planning.",
+      "link": "https://miro.com/"
     },
     {
-      "id": "r16",
-      "title": "OpenGameArt",
-      "type": "Assets Resources",
-      "description": "A repository of free game art, including sprites, textures and sound effects.",
-      "link": "https://opengameart.org/"
-    },
-    {
-      "id": "r17",
+      "id": "r13",
       "title": "Trello",
-      "type": "Additional Tools",
-      "description": "A project management tool to help organise tasks and collaborate with team members.",
+      "type": "Additional tools",
+      "description": "Kanban boards to organise tasks and team workflow.",
       "link": "https://trello.com/"
-    },
-    {
-      "id": "r18",
-      "title": "Tiled",
-      "type": "Additional Tools",
-      "description": "A map editor for creating tile-based levels.",
-      "link": "http://www.mapeditor.org/"
-    },
-    {
-      "id": "r19",
-      "title": "Inkscape",
-      "type": "Additional Tools",
-      "description": "A free and open-source vector graphics editor.",
-      "link": "https://inkscape.org/"
     }
   ],
   "tutorials": [
@@ -576,52 +572,6 @@
     },
     {
       "id": "topic2",
-      "title": "Budgeting and Financial Essentials",
-      "links": [
-        {
-          "title": "Budgeting",
-          "link": "https://www.scottishwidowsbemoneywell.co.uk/financial-essentials/budgeting.html"
-        },
-        {
-          "title": "Scottish Widows Be Money Well",
-          "link": "https://www.scottishwidowsbemoneywell.co.uk/financial-essentials.html"
-        },
-        {
-          "title": "Teaching Children About Money",
-          "link": "https://www.lloydsbank.com/help-guidance/family-finances/teaching-children-about-money.html"
-        },
-        {
-          "title": "Budget Calculator",
-          "link": "https://www.lloydsbank.com/help-guidance/support-and-wellbeing/managing-your-money/budget-calculator.html"
-        }
-      ]
-    },
-    {
-      "id": "topic3",
-      "title": "Life Insurance or Critical Illness",
-      "links": [
-        {
-          "title": "Life Insurance",
-          "link": "https://www.scottishwidows.co.uk/life-insurance.html"
-        },
-        {
-          "title": "Critical Illness",
-          "link": "https://www.scottishwidows.co.uk/life-insurance/critical-illness-cover.html"
-        }
-      ]
-    },
-    {
-      "id": "topic4",
-      "title": "Insurance - Pet, Car or Home",
-      "links": [
-        {
-          "title": "Insurance Quotes in Minutes",
-          "link": "https://www.lloydsbank.com/insurance.html"
-        }
-      ]
-    },
-    {
-      "id": "topic5",
       "title": "Building Your Pension",
       "links": [
         {
@@ -639,7 +589,7 @@
       ]
     },
     {
-      "id": "topic6",
+      "id": "topic3",
       "title": "Accessing Your Pension",
       "links": [
         {
@@ -660,5 +610,43 @@
         }
       ]
     }
-  ]
+  ],
+  "genderGap": {
+    "pensions": [
+      {
+        "title": "Scottish Widows Retirement Report 2025",
+        "link": "https://adviser.scottishwidows.co.uk/assets/literature/docs/retirement-report-2025.pdf"
+      },
+      {
+        "title": "The Challenges Women Face With Retirement",
+        "link": "https://www.forbes.com/sites/melissahouston/2023/10/16/the-challenges-women-face-with-retirement-planning-and-how-to-overcome-them/"
+      },
+      {
+        "title": "Gender gap means retired women ‘have four months a year with no pension’",
+        "link": "https://www.theguardian.com/world/2025/aug/21/gender-pension-gap-7600-a-year-union-inequality-women"
+      },
+      {
+        "title": "How can we narrow the pension gender gap?",
+        "link": "https://www.moneyboxapp.com/learn/pensions/articles/how-can-we-narrow-the-pension-gender-gap/"
+      }
+    ],
+    "investing": [
+      {
+        "title": "Women in Investing",
+        "link": "https://www.lloydsbank.com/investing/landing-pages/women-in-investing.html"
+      },
+      {
+        "title": "The gender investing gap",
+        "link": "https://www.natwest.com/investments/our-insights/gender-investing-gap.html"
+      },
+      {
+        "title": "Mind The Gap: How Female Invest Is Changing The Narrative On Women And Wealth",
+        "link": "https://www.forbes.com/sites/angelachan/2025/03/25/mind-the-gap-how-female-invest-is-changing-the-narrative-on-women-and-wealth/"
+      },
+      {
+        "title": "Female Invest: The #1 Money App For Women",
+        "link": "https://www.femaleinvest.com/en-gb"
+      }
+    ]
+  }
 }

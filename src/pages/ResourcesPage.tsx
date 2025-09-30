@@ -1,23 +1,15 @@
 import styled from "@emotion/styled";
 import { SetStateAction, useState } from "react";
+import { FaChartLine, FaCode, FaFolderOpen, FaGamepad, FaPalette, FaPiggyBank, FaToolbox } from "react-icons/fa";
+import Accordion from "../components/Accordion";
 import data from "../db.json";
-import { pageContainerStyles, Paragraph, Heading } from "../styles/sharedStyles";
+import { Heading, pageContainerStyles, Paragraph, StyledCard } from "../styles/sharedStyles";
 
 export default function ResourcesPage() {
   const [activeFilter, setActiveFilter] = useState("all");
-  const [expandedTopics, setExpandedTopics] = useState<{
-    [key: string]: boolean;
-  }>({});
 
   const handleFilterChange = (filter: SetStateAction<string>) => {
     setActiveFilter(filter);
-  };
-
-  const handleTopicToggle = (topicId: string) => {
-    setExpandedTopics((prev) => ({
-      ...prev,
-      [topicId]: !prev[topicId],
-    }));
   };
 
   const filteredTutorials = data.tutorials.filter((tutorial) => {
@@ -29,18 +21,30 @@ export default function ResourcesPage() {
     new Set(data.resources.map((resource) => resource.type))
   );
 
+  const typeIconMap: Record<string, JSX.Element> = {
+    "Games tools": <FaGamepad />,
+    "Design tools": <FaPalette />,
+    "IDE's": <FaCode />,
+    "Additional tools": <FaToolbox />,
+  };
+
   return (
     <PageContainer>
       <Wrapper>
         <Heading>Resources</Heading>
 
         <Section>
-          <SubTitle>Free tools for making games</SubTitle>
+          <SubTitle>Here are some tools you may wish to consider using</SubTitle>
 
           <ResourcesWrapper>
             {resourceTypes.map((type) => (
               <ResourceWrapper key={type}>
-                <CardTitle>{type}</CardTitle>
+                <TypeHeader>
+                  <TypeIcon aria-label={`${type} icon`}>
+                    {typeIconMap[type] ?? <FaFolderOpen />}
+                  </TypeIcon>
+                  <CardTitle>{type}</CardTitle>
+                </TypeHeader>
                 <ResourceContainer>
                   {data.resources
                     .filter((resource) => resource.type === type)
@@ -68,9 +72,9 @@ export default function ResourcesPage() {
           <TemplateSection>
             <SubTitle>Template Repo</SubTitle>
             <Paragraph>
-              The Game Jam Dundee team have put together a{" "}
+              We have put together a{" "}
               <strong>template Github repo </strong>
-              to help you get started!{" "}
+              for a Unity project to help you get started!{" "}
             </Paragraph>
 
             <TemplateRepoButton
@@ -84,35 +88,67 @@ export default function ResourcesPage() {
         </Section>
 
         <Section>
-          <SubTitle>Topics</SubTitle>
+          <SubTitle>The Gender Gap</SubTitle>
+          <ResourcesWrapper>
+            <ResourceWrapper>
+              <TypeHeader>
+                <TypeIcon aria-label='Pensions icon'>
+                  <FaPiggyBank />
+                </TypeIcon>
+                <CardTitle>Pensions</CardTitle>
+              </TypeHeader>
+              <ResourceContainer>
+                {data.genderGap?.pensions?.map((item, idx) => (
+                  <Resource key={idx}>
+                    <ResourceTitle href={item.link} target='_blank' rel='noopener noreferrer'>
+                      {item.title}
+                    </ResourceTitle>
+                  </Resource>
+                ))}
+              </ResourceContainer>
+            </ResourceWrapper>
+            <ResourceWrapper>
+              <TypeHeader>
+                <TypeIcon aria-label='Investing icon'>
+                  <FaChartLine />
+                </TypeIcon>
+                <CardTitle>Investing</CardTitle>
+              </TypeHeader>
+              <ResourceContainer>
+                {data.genderGap?.investing?.map((item, idx) => (
+                  <Resource key={idx}>
+                    <ResourceTitle href={item.link} target='_blank' rel='noopener noreferrer'>
+                      {item.title}
+                    </ResourceTitle>
+                  </Resource>
+                ))}
+              </ResourceContainer>
+            </ResourceWrapper>
+          </ResourcesWrapper>
+        </Section>
+
+        <Section>
+          <SubTitle>Investments & Pensions</SubTitle>
           <Paragraph>
-            Your team will be given a random finance-related topic from the list
-            below.
+            Here are some useful links and resources to help you learn more about pensions and investments.
           </Paragraph>
           <TopicsGrid>
-            {data.topics.map((topic, index) => (
-              <TopicWrapper key={topic.id}>
-                <TopicCard onClick={() => handleTopicToggle(topic.id)}>
-                  <TopicNumber>{index + 1}</TopicNumber>
-                  <TopicTitle>{topic.title}</TopicTitle>
-                  <Arrow>{expandedTopics[topic.id] ? "▲" : "▼"}</Arrow>
-                </TopicCard>
-                {expandedTopics[topic.id] && (
-                  <LinksList>
-                    {topic.links.map((link, linkIndex) => (
-                      <LinkItem key={linkIndex}>
-                        <a
-                          href={link.link}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          {link.title}
-                        </a>
-                      </LinkItem>
-                    ))}
-                  </LinksList>
-                )}
-              </TopicWrapper>
+            {data.topics.map((topic) => (
+              <Accordion key={topic.id} title={topic.title}>
+                <LinksList>
+                  {topic.links.map((link, linkIndex) => (
+                    <LinkItem key={linkIndex}>
+                      <a
+                        href={link.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        {link.title}
+                      </a>
+                    </LinkItem>
+                  ))}
+                </LinksList>
+              </Accordion>
             ))}
           </TopicsGrid>
         </Section>
@@ -157,16 +193,16 @@ export default function ResourcesPage() {
           <Paragraph>
             Use the following tutorials to learn how to make a simple game.
           </Paragraph>
-          {filteredTutorials.map((tutorial, index) => (
-            <Tutorial key={index}>
-              <ResourceTitle
+          {filteredTutorials.map((tutorial) => (
+            <TutorialCard key={tutorial.id}>
+              <TutorialTitle
                 href={tutorial.link}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 {tutorial.title}
-              </ResourceTitle>
-            </Tutorial>
+              </TutorialTitle>
+            </TutorialCard>
           ))}
         </Section>
       </Wrapper>
@@ -186,7 +222,7 @@ const Wrapper = styled.div`
   margin: auto;
 `;
 
-const TemplateSection = styled.div`
+export const TemplateSection = styled.div`
   padding: 2rem;
   border-radius: 12px;
   background-color: ${({ theme }) => theme.colors.teal};
@@ -208,7 +244,7 @@ const TemplateSection = styled.div`
   }
 `;
 
-const TemplateRepoButton = styled.a`
+export const TemplateRepoButton = styled.a`
   display: inline-block;
   padding: 0.75rem 1.5rem;
   background-color: ${({ theme }) => theme.colors.lilacShade};
@@ -222,73 +258,101 @@ const TemplateRepoButton = styled.a`
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.lilacShade};
+    background-color: ${({ theme }) => theme.colors.lavenderPurple};
     transform: translateY(-3px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
 `;
 
 const CardTitle = styled.h3`
-  margin-bottom: 1rem;
+  margin: 0;
 `;
 
 const ResourcesWrapper = styled.div`
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    grid-template-columns: 1fr 1fr;
-  }
+  grid-template-columns: 1fr 1fr;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     grid-template-columns: 1fr;
   }
 `;
 
-const ResourceWrapper = styled.div`
+const TypeHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+`;
+
+const TypeIcon = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.teal};
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+`;
+
+const ResourceWrapper = styled(StyledCard)`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: stretch;
 `;
 
 const ResourceContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  gap: 1rem;
+  width: 100%;
+  gap: 0.75rem;
 `;
 
 const Resource = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  flex-grow: 1;
-  min-height: 160px;
-  padding-right: 1rem;
+  gap: 0.35rem;
+  margin: 0.25rem 0;
+  padding-right: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    min-height: auto;
-    padding-right: 0;
+  &:not(:first-of-type) {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 0.75rem;
   }
 `;
 
 const ResourceTitle = styled.a`
   margin: 0;
-  font-size: 1.3rem;
-  color: ${({ theme }) => theme.colors.lilacShade};
+  font-size: 1.2rem;
+  color: ${({ theme }) => theme.colors.teal};
   text-decoration: none;
 
   &:hover {
+    color: ${({ theme }) => theme.colors.lavenderPurple};
     text-decoration: underline;
     cursor: pointer;
   }
 `;
+const TutorialTitle = styled.a`
+  margin: 0;
+  font-size: 1.3rem;
+  color: ${({ theme }) => theme.colors.teal};
+  text-decoration: none;
+
+  &:hover {
+
+    cursor: pointer;
+      color: ${({ theme }) => theme.colors.lavenderPurple};
+  }
+`;
 
 const ResourceDescription = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
 `;
 
@@ -303,7 +367,7 @@ const FilterButton = styled.button<{ active: boolean }>`
   border: none;
   border-radius: 4px;
   background-color: ${({ active, theme }) =>
-    active ? theme.colors.lilacShade : theme.colors.turquoiseShade};
+    active ? theme.colors.lilac : theme.colors.teal};
   color: white;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -324,54 +388,6 @@ const TopicsGrid = styled.div`
   }
 `;
 
-const TopicWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-`;
-
-const TopicCard = styled.div`
-  background: white;
-  border-radius: 8px;
-  border: 1px solid ${({ theme }) => theme.colors.turquoiseShade};
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  }
-`;
-
-const TopicNumber = styled.h3`
-  width: 30px;
-  height: 30px;
-  font-weight: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${({ theme }) => theme.colors.turquoiseShade};
-  border-radius: 50%;
-  margin: 0;
-  color: white;
-`;
-
-const TopicTitle = styled.h3`
-  color: ${({ theme }) => theme.colors.turquoiseShade};
-  margin: 0;
-`;
-
-const Arrow = styled.span`
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.colors.turquoiseShade};
-`;
-
 const LinksList = styled.ul`
   list-style: none;
   padding: 0;
@@ -383,40 +399,28 @@ const LinkItem = styled.p`
   font-size: 1.3rem;
 
   a {
-    color: ${({ theme }) => theme.colors.lilacShade};
+    color: black;
     text-decoration: none;
 
     &:hover {
+      color: ${({ theme }) => theme.colors.lavenderPurple};
       text-decoration: underline;
     }
   }
 `;
 
 const Link = styled.a`
-  color: ${({ theme }) => theme.colors.lilacShade};
+  color: ${({ theme }) => theme.colors.teal};
   text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+      color: ${({ theme }) => theme.colors.lavenderPurple};
+      text-decoration: underline;
+    }
 `;
 
-const Tutorial = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem 1.2rem;
-  border: 1px solid ${({ theme }) => theme.colors.lilacShade};
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+const TutorialCard = styled(StyledCard)`
   margin-bottom: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
 `;
 
 const Section = styled.div`

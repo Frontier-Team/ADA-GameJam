@@ -1,14 +1,14 @@
-import { useEffect, useState, useRef } from "react";
-import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
-import logoOptimized from "../assets/ELT.gif"; //Needs updated with new logo for ADA
+import styled from "@emotion/styled";
+import { useEffect, useRef, useState } from "react";
+import logoOptimized from "../assets/ELT.gif";
 
 export default function HeroComponent() {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
   const [showArrow, setShowArrow] = useState(true);
   const arrowRef = useRef<HTMLDivElement>(null);
 
-  // don't render image until loaded
+
   useEffect(() => {
     const img = new Image();
     img.src = logoOptimized;
@@ -56,15 +56,13 @@ export default function HeroComponent() {
       <Content>
         <LeftColumn>
           <Title>
-            <span className="welcome">Welcome to</span>
+            <span className="welcome">Welcome to Game Jam</span>
             <span className="game-jam-dundee">
-              the CIO IP&amp;I Q3 ELT Event
+              powered by ada.scot and Lloyds Banking Group
             </span>
           </Title>
           <Subtitle>
-            Hosted by the Waterfront platform, we'd love for you to join us for
-            a retro game themed event with thought provoking talks and our first
-            ever expo!
+
           </Subtitle>
         </LeftColumn>
         <RightColumn>
@@ -124,6 +122,9 @@ const Wrapper = styled.div`
   box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 36px 0px,
     rgba(0, 128, 128, 0.2) 0px 0px 0px 1px;
   position: relative;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
 
   @media (max-width: 1300px) {
     margin-top: 0;
@@ -160,19 +161,24 @@ const RightColumn = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 2.8rem;
   color: white;
   margin-bottom: 1rem;
   animation: ${slideDownWithFade} 1.2s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s;
   animation-fill-mode: backwards;
   text-align: left;
 
+  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
+    margomn-bottom: 0;
+  }
+
   .welcome {
     display: block;
+      color: ${({ theme }) => theme.colors.turquoise};
   }
 
   .game-jam-dundee {
     display: block;
+    
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
@@ -206,14 +212,11 @@ const GifImage = styled.img`
   }
   transition: transform 0.3s ease-in-out;
 
-  &:hover {
-    transform: scale(1.1);
-  }
 `;
 
 const ScrollDownArrow = styled.div`
   position: absolute;
-  bottom: 10px;
+  bottom: 50px; 
   font-size: 3rem;
   color: ${({ theme }) => theme.colors.turquoise};
   animation: ${bounce} 1s infinite;
