@@ -12,7 +12,7 @@ const theme = {
     lilac: "#303033",
     lilacShade: "#000",
     darkPink: "#FFCCD9",
-    lavenderPurple: "#c891ff"
+    lavenderPurple: "#C891FF"
   },
   breakpoints: {
     sm: "576px",
@@ -20,7 +20,6 @@ const theme = {
     lg: "992px",
   },
 };
-
 
 const base = import.meta.env.BASE_URL || "/";
 const normalisedBase = base.endsWith("/") ? base : `${base}/`;
