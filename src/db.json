@@ -428,14 +428,14 @@
     },
     {
       "id": "r4",
-      "title": "rive",
+      "title": "Rive",
       "type": "Design tools",
       "description": "Real‑time vector animation tool for apps and games.",
       "link": "https://rive.app/"
     },
     {
       "id": "r5",
-      "title": "figma",
+      "title": "Figma",
       "type": "Design tools",
       "description": "Collaborative UI design and prototyping platform.",
       "link": "https://www.figma.com/"
@@ -610,5 +610,43 @@
         }
       ]
     }
-  ]
+  ],
+  "genderGap": {
+    "pensions": [
+      {
+        "title": "Scottish Widows Retirement Report 2025",
+        "link": "https://adviser.scottishwidows.co.uk/assets/literature/docs/retirement-report-2025.pdf"
+      },
+      {
+        "title": "The Challenges Women Face With Retirement",
+        "link": "https://www.forbes.com/sites/melissahouston/2023/10/16/the-challenges-women-face-with-retirement-planning-and-how-to-overcome-them/"
+      },
+      {
+        "title": "Gender gap means retired women ‘have four months a year with no pension’",
+        "link": "https://www.theguardian.com/world/2025/aug/21/gender-pension-gap-7600-a-year-union-inequality-women"
+      },
+      {
+        "title": "How can we narrow the pension gender gap?",
+        "link": "https://www.moneyboxapp.com/learn/pensions/articles/how-can-we-narrow-the-pension-gender-gap/"
+      }
+    ],
+    "investing": [
+      {
+        "title": "Women in Investing",
+        "link": "https://www.lloydsbank.com/investing/landing-pages/women-in-investing.html"
+      },
+      {
+        "title": "The gender investing gap",
+        "link": "https://www.natwest.com/investments/our-insights/gender-investing-gap.html"
+      },
+      {
+        "title": "Mind The Gap: How Female Invest Is Changing The Narrative On Women And Wealth",
+        "link": "https://www.forbes.com/sites/angelachan/2025/03/25/mind-the-gap-how-female-invest-is-changing-the-narrative-on-women-and-wealth/"
+      },
+      {
+        "title": "Female Invest: The #1 Money App For Women",
+        "link": "https://www.femaleinvest.com/en-gb"
+      }
+    ]
+  }
 }

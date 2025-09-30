@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { SetStateAction, useState } from "react";
+import { FaChartLine, FaCode, FaFolderOpen, FaGamepad, FaPalette, FaPiggyBank, FaToolbox } from "react-icons/fa";
 import Accordion from "../components/Accordion";
 import data from "../db.json";
 import { Heading, pageContainerStyles, Paragraph, StyledCard } from "../styles/sharedStyles";
@@ -11,8 +12,6 @@ export default function ResourcesPage() {
     setActiveFilter(filter);
   };
 
-  // Topics now use shared Accordion; no manual toggle state needed
-
   const filteredTutorials = data.tutorials.filter((tutorial) => {
     if (activeFilter === "all") return true;
     return tutorial.type === activeFilter;
@@ -22,18 +21,30 @@ export default function ResourcesPage() {
     new Set(data.resources.map((resource) => resource.type))
   );
 
+  const typeIconMap: Record<string, JSX.Element> = {
+    "Games tools": <FaGamepad />,
+    "Design tools": <FaPalette />,
+    "IDE's": <FaCode />,
+    "Additional tools": <FaToolbox />,
+  };
+
   return (
     <PageContainer>
       <Wrapper>
         <Heading>Resources</Heading>
 
         <Section>
-          <SubTitle>Free tools for making games</SubTitle>
+          <SubTitle>Here are some tools you may wish to consider using</SubTitle>
 
           <ResourcesWrapper>
             {resourceTypes.map((type) => (
               <ResourceWrapper key={type}>
-                <CardTitle>{type}</CardTitle>
+                <TypeHeader>
+                  <TypeIcon aria-label={`${type} icon`}>
+                    {typeIconMap[type] ?? <FaFolderOpen />}
+                  </TypeIcon>
+                  <CardTitle>{type}</CardTitle>
+                </TypeHeader>
                 <ResourceContainer>
                   {data.resources
                     .filter((resource) => resource.type === type)
@@ -74,6 +85,46 @@ export default function ResourcesPage() {
               View Template Repo
             </TemplateRepoButton>
           </TemplateSection>
+        </Section>
+
+        <Section>
+          <SubTitle>The Gender Gap</SubTitle>
+          <ResourcesWrapper>
+            <ResourceWrapper>
+              <TypeHeader>
+                <TypeIcon aria-label='Pensions icon'>
+                  <FaPiggyBank />
+                </TypeIcon>
+                <CardTitle>Pensions</CardTitle>
+              </TypeHeader>
+              <ResourceContainer>
+                {data.genderGap?.pensions?.map((item, idx) => (
+                  <Resource key={idx}>
+                    <ResourceTitle href={item.link} target='_blank' rel='noopener noreferrer'>
+                      {item.title}
+                    </ResourceTitle>
+                  </Resource>
+                ))}
+              </ResourceContainer>
+            </ResourceWrapper>
+            <ResourceWrapper>
+              <TypeHeader>
+                <TypeIcon aria-label='Investing icon'>
+                  <FaChartLine />
+                </TypeIcon>
+                <CardTitle>Investing</CardTitle>
+              </TypeHeader>
+              <ResourceContainer>
+                {data.genderGap?.investing?.map((item, idx) => (
+                  <Resource key={idx}>
+                    <ResourceTitle href={item.link} target='_blank' rel='noopener noreferrer'>
+                      {item.title}
+                    </ResourceTitle>
+                  </Resource>
+                ))}
+              </ResourceContainer>
+            </ResourceWrapper>
+          </ResourcesWrapper>
         </Section>
 
         <Section>
@@ -214,59 +265,75 @@ export const TemplateRepoButton = styled.a`
 `;
 
 const CardTitle = styled.h3`
-  margin-bottom: 1rem;
+  margin: 0;
 `;
 
 const ResourcesWrapper = styled.div`
   display: grid;
   gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.lg}) {
-    grid-template-columns: 1fr 1fr;
-  }
+  grid-template-columns: 1fr 1fr;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
     grid-template-columns: 1fr;
   }
 `;
 
-const ResourceWrapper = styled.div`
+const TypeHeader = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+`;
+
+const TypeIcon = styled.span`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.teal};
+
+  svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+`;
+
+const ResourceWrapper = styled(StyledCard)`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: stretch;
 `;
 
 const ResourceContainer = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 600px;
-  gap: 1rem;
+  width: 100%;
+  gap: 0.75rem;
 `;
 
 const Resource = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  flex-grow: 1;
-  min-height: 160px;
-  padding-right: 1rem;
+  gap: 0.35rem;
+  margin: 0.25rem 0;
+  padding-right: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
-    min-height: auto;
-    padding-right: 0;
+  &:not(:first-of-type) {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding-top: 0.75rem;
   }
 `;
 
 const ResourceTitle = styled.a`
   margin: 0;
-  font-size: 1.3rem;
-  color: ${({ theme }) => theme.colors.lavenderPurple};
+  font-size: 1.2rem;
+  color: ${({ theme }) => theme.colors.teal};
   text-decoration: none;
 
   &:hover {
+    color: ${({ theme }) => theme.colors.lavenderPurple};
     text-decoration: underline;
     cursor: pointer;
   }
@@ -285,7 +352,7 @@ const TutorialTitle = styled.a`
 `;
 
 const ResourceDescription = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
 `;
 
