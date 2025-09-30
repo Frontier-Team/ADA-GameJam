@@ -4,9 +4,9 @@ import { AccessibilityPage } from "./pages/AccessibilityPage";
 import { ConductPage } from "./pages/ConductPage";
 import { HomePage } from "./pages/HomePage";
 import { JammerPage } from "./pages/JammerPage";
-import { SchedulePage } from "./pages/SchedulePage";
 import { AppThemeProvider } from "./providers/ThemeProvider";
 import ResourcesPage from "./pages/ResourcesPage";
+import { TalkAgendaPage } from "./pages/TalkAgendaPage";
 
 export const App = () => {
   return (
@@ -16,7 +16,7 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/conduct" element={<ConductPage />} />
-          <Route path="/schedule" element={<SchedulePage />} />
+          <Route path="/schedule" element={<TalkAgendaPage />} />
           <Route path="/jammers" element={<JammerPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
           <Route path="/conduct" element={<ConductPage />} />
