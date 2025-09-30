@@ -438,7 +438,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
 
 `,yS=U.div`
   position: absolute;
-  bottom: 5px;
+  bottom: 20px; 
   font-size: 3rem;
   color: ${({theme:t})=>t.colors.turquoise};
   animation: ${uS} 1s infinite;
