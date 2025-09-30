@@ -1,24 +1,17 @@
 import styled from "@emotion/styled";
 import { SetStateAction, useState } from "react";
+import Accordion from "../components/Accordion";
 import data from "../db.json";
-import { Heading, pageContainerStyles, Paragraph } from "../styles/sharedStyles";
+import { Heading, pageContainerStyles, Paragraph, StyledCard } from "../styles/sharedStyles";
 
 export default function ResourcesPage() {
   const [activeFilter, setActiveFilter] = useState("all");
-  const [expandedTopics, setExpandedTopics] = useState<{
-    [key: string]: boolean;
-  }>({});
 
   const handleFilterChange = (filter: SetStateAction<string>) => {
     setActiveFilter(filter);
   };
 
-  const handleTopicToggle = (topicId: string) => {
-    setExpandedTopics((prev) => ({
-      ...prev,
-      [topicId]: !prev[topicId],
-    }));
-  };
+  // Topics now use shared Accordion; no manual toggle state needed
 
   const filteredTutorials = data.tutorials.filter((tutorial) => {
     if (activeFilter === "all") return true;
@@ -70,7 +63,7 @@ export default function ResourcesPage() {
             <Paragraph>
               We have put together a{" "}
               <strong>template Github repo </strong>
-              to help you get started!{" "}
+              for a Unity project to help you get started!{" "}
             </Paragraph>
 
             <TemplateRepoButton
@@ -89,29 +82,22 @@ export default function ResourcesPage() {
             Here are some useful links and resources to help you learn more about pensions and investments.
           </Paragraph>
           <TopicsGrid>
-            {data.topics.map((topic, index) => (
-              <TopicWrapper key={topic.id}>
-                <TopicCard onClick={() => handleTopicToggle(topic.id)}>
-                  <TopicNumber>{index + 1}</TopicNumber>
-                  <TopicTitle>{topic.title}</TopicTitle>
-                  <Arrow>{expandedTopics[topic.id] ? "▲" : "▼"}</Arrow>
-                </TopicCard>
-                {expandedTopics[topic.id] && (
-                  <LinksList>
-                    {topic.links.map((link, linkIndex) => (
-                      <LinkItem key={linkIndex}>
-                        <a
-                          href={link.link}
-                          target='_blank'
-                          rel='noopener noreferrer'
-                        >
-                          {link.title}
-                        </a>
-                      </LinkItem>
-                    ))}
-                  </LinksList>
-                )}
-              </TopicWrapper>
+            {data.topics.map((topic) => (
+              <Accordion key={topic.id} title={topic.title}>
+                <LinksList>
+                  {topic.links.map((link, linkIndex) => (
+                    <LinkItem key={linkIndex}>
+                      <a
+                        href={link.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        {link.title}
+                      </a>
+                    </LinkItem>
+                  ))}
+                </LinksList>
+              </Accordion>
             ))}
           </TopicsGrid>
         </Section>
@@ -156,16 +142,16 @@ export default function ResourcesPage() {
           <Paragraph>
             Use the following tutorials to learn how to make a simple game.
           </Paragraph>
-          {filteredTutorials.map((tutorial, index) => (
-            <Tutorial key={index}>
-              <ResourceTitle
+          {filteredTutorials.map((tutorial) => (
+            <TutorialCard key={tutorial.id}>
+              <TutorialTitle
                 href={tutorial.link}
                 target='_blank'
                 rel='noopener noreferrer'
               >
                 {tutorial.title}
-              </ResourceTitle>
-            </Tutorial>
+              </TutorialTitle>
+            </TutorialCard>
           ))}
         </Section>
       </Wrapper>
@@ -285,6 +271,18 @@ const ResourceTitle = styled.a`
     cursor: pointer;
   }
 `;
+const TutorialTitle = styled.a`
+  margin: 0;
+  font-size: 1.3rem;
+  color: ${({ theme }) => theme.colors.teal};
+  text-decoration: none;
+
+  &:hover {
+
+    cursor: pointer;
+      color: ${({ theme }) => theme.colors.lavenderPurple};
+  }
+`;
 
 const ResourceDescription = styled.p`
   font-size: 1.2rem;
@@ -302,7 +300,7 @@ const FilterButton = styled.button<{ active: boolean }>`
   border: none;
   border-radius: 4px;
   background-color: ${({ active, theme }) =>
-    active ? theme.colors.lilacShade : theme.colors.turquoiseShade};
+    active ? theme.colors.lilac : theme.colors.teal};
   color: white;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -323,54 +321,6 @@ const TopicsGrid = styled.div`
   }
 `;
 
-const TopicWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-`;
-
-const TopicCard = styled.div`
-  background: white;
-  border-radius: 8px;
-  border: 1px solid ${({ theme }) => theme.colors.turquoiseShade};
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, box-shadow 0.2s;
-  cursor: pointer;
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  }
-`;
-
-const TopicNumber = styled.h3`
-  width: 30px;
-  height: 30px;
-  font-weight: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: ${({ theme }) => theme.colors.turquoiseShade};
-  border-radius: 50%;
-  margin: 0;
-  color: white;
-`;
-
-const TopicTitle = styled.h3`
-  color: ${({ theme }) => theme.colors.turquoiseShade};
-  margin: 0;
-`;
-
-const Arrow = styled.span`
-  font-size: 1.5rem;
-  color: ${({ theme }) => theme.colors.turquoiseShade};
-`;
-
 const LinksList = styled.ul`
   list-style: none;
   padding: 0;
@@ -382,40 +332,28 @@ const LinkItem = styled.p`
   font-size: 1.3rem;
 
   a {
-    color: ${({ theme }) => theme.colors.lavenderPurple};
+    color: black;
     text-decoration: none;
 
     &:hover {
+      color: ${({ theme }) => theme.colors.lavenderPurple};
       text-decoration: underline;
     }
   }
 `;
 
 const Link = styled.a`
-  color: ${({ theme }) => theme.colors.lavenderPurple};
+  color: ${({ theme }) => theme.colors.teal};
   text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
+    &:hover {
+      color: ${({ theme }) => theme.colors.lavenderPurple};
+      text-decoration: underline;
+    }
 `;
 
-const Tutorial = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 1rem 1.2rem;
-  border: 1px solid ${({ theme }) => theme.colors.lavenderPurple};
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+const TutorialCard = styled(StyledCard)`
   margin-bottom: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-  }
 `;
 
 const Section = styled.div`

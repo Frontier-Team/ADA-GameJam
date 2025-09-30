@@ -298,16 +298,16 @@ const MapFrame = styled.iframe`
   }
 `;
 
-const Footer = styled.div`
+export const Footer = styled.div`
   display: flex;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   background-color: ${({ theme }) => theme.colors.teal};
   border-radius: 10px;
   margin-top: 1rem;
 `;
 
-const FooterContent = styled.div`
+export const FooterContent = styled.div`
   color: white;
 
   a {
