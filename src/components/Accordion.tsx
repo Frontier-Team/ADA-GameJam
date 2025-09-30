@@ -29,14 +29,14 @@ const AccordionTitle = styled.button`
   -webkit-tap-highlight-color: transparent;
 
   &:focus {
-    color: ${({ theme }) => theme.colors.lilacShade};
+    color: ${({ theme }) => theme.colors.lavenderPurple};
   }
 
   &:hover {
-    color: ${({ theme }) => theme.colors.lilac};
+    color: ${({ theme }) => theme.colors.lavenderPurple};
 
     svg {
-      color: ${({ theme }) => theme.colors.lilac};
+      color: ${({ theme }) => theme.colors.lavenderPurple};
     }
   }
 

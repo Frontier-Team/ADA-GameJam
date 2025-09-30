@@ -12,6 +12,7 @@ declare module "@emotion/react" {
       lilac: string;
       lilacShade: string;
       darkPink: string;
+      lavenderPurple: string;
     };
     breakpoints: {
       sm: string;

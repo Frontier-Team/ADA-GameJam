@@ -21,48 +21,21 @@ export const JammerPage: React.FC = () => {
         <CenteredParagraph>{jammer.welcomeDescription}</CenteredParagraph>
 
         <h2>{jammer.challengeTitle}</h2>
-        <Paragraph>{jammer.challengeDescription}</Paragraph>
-
-        <Accordion title={jammer.internalColleagues}>
-          <CenteredParagraph>{jammer.challengeInternal}</CenteredParagraph>
-          <CenteredParagraph>{jammer.challengeInternalDescriptor}</CenteredParagraph>
-          <CenteredParagraph>
-            {jammer.internalTopics.split("\n").map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
-          </CenteredParagraph>
-        </Accordion>
-
-        <Accordion title={jammer.externalColleagues}>
-          <CenteredParagraph>{jammer.challengeExternal}</CenteredParagraph>
-          <CenteredParagraph>
-            {jammer.externalTopics.split("\n").map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                <br />
-              </React.Fragment>
-            ))}
-          </CenteredParagraph>
-          <CenteredParagraph>{jammer.externalDescriptor}</CenteredParagraph>
-
-        </Accordion>
+        <StyledCard>
+          <CenteredParagraph>{jammer.challengeDescription}</CenteredParagraph>
+        </StyledCard>
 
         <h2>{jammer.Pitches.title}</h2>
         <Paragraph>{jammer.Pitches.description}</Paragraph>
-        <Paragraph>{jammer.Pitches.presentation}</Paragraph>
-        <CenteredParagraph>{jammer.Pitches.time}</CenteredParagraph>
+        <Paragraph>{jammer.Pitches.length}</Paragraph>
         <PrizesContainer>
           <StyledCard>
-            <SubHeading>Internal Teams</SubHeading>
-            <CenteredParagraph>{jammer.Pitches.locationInternal}</CenteredParagraph>
+            <CenteredParagraph>{jammer.Pitches.coachTime}</CenteredParagraph>
           </StyledCard>
           <StyledCard>
-            <SubHeading>Student Teams</SubHeading>
-            <CenteredParagraph>{jammer.Pitches.locationExternal}</CenteredParagraph>
+            <CenteredParagraph>{jammer.Pitches.judgeTime}</CenteredParagraph>
           </StyledCard>
+          <Paragraph>{jammer.Pitches.presentation}</Paragraph>
         </PrizesContainer>
 
         <h2>{jammer.judgingTitle}</h2>
@@ -76,7 +49,7 @@ export const JammerPage: React.FC = () => {
         </JudgingContainer>
       </>
       <>
-        <h2>Awards</h2>
+        <h2>Winners</h2>
         <PrizesContainer>
           {jammer.Awards.awards.map((award, index) => (
             <StyledCard key={index}>
@@ -91,26 +64,6 @@ export const JammerPage: React.FC = () => {
               <CenteredParagraph style={{ marginBottom: "0" }}>
                 {award.prizes.all}
               </CenteredParagraph>
-              {award.prizes.Internal && (
-                <>
-                  <SubHeading style={{ marginBottom: "0" }}>
-                    For Internal Teams{" "}
-                  </SubHeading>
-                  <CenteredParagraph style={{ marginTop: "0" }}>
-                    {award.prizes.Internal}
-                  </CenteredParagraph>
-                </>
-              )}
-              {award.prizes.External && (
-                <>
-                  <SubHeading style={{ marginBottom: "0" }}>
-                    For Student Teams{" "}
-                  </SubHeading>
-                  <CenteredParagraph style={{ marginTop: "0" }}>
-                    {award.prizes.External}
-                  </CenteredParagraph>
-                </>
-              )}
             </StyledCard>
           ))}
         </PrizesContainer>

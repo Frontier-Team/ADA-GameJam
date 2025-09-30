@@ -17,7 +17,9 @@
       "name": "Daria Naidonova",
       "occupation": "Student",
       "details": "Studying Experience Design (BDes Hons) at University of Dundee",
-      "contact": ["Instagram - https://www.instagram.com/naidenovka007"],
+      "contact": [
+        "Instagram - https://www.instagram.com/naidenovka007"
+      ],
       "isFilterable": true
     },
     {
@@ -48,7 +50,9 @@
       "name": "Amy Rodger",
       "occupation": "Design Researcher",
       "details": "Researching at Scottish Widows",
-      "contact": ["LinkedIn - https://www.linkedin.com/in/amyrodgercs"],
+      "contact": [
+        "LinkedIn - https://www.linkedin.com/in/amyrodgercs"
+      ],
       "isFilterable": true
     },
     {
@@ -56,7 +60,9 @@
       "name": "Yi Han",
       "occupation": "Interaction Designer",
       "details": "Designing at Scottish Widows",
-      "contact": ["LinkedIn - https://www.linkedin.com/in/yiiihan"],
+      "contact": [
+        "LinkedIn - https://www.linkedin.com/in/yiiihan"
+      ],
       "isFilterable": true
     },
     {
@@ -155,35 +161,47 @@
       "id": 1,
       "time": "09:30",
       "topic": "Welcome and the Game Plan ahead!",
-      "speakers": ["Derek Shanks"],
+      "speakers": [
+        "Derek Shanks"
+      ],
       "location": "St Giles"
     },
     {
       "id": 2,
       "time": "09:40",
       "topic": "Beginning of the People Adventure",
-      "speakers": ["Rose Ulldemolins", "Nick Grant"],
+      "speakers": [
+        "Rose Ulldemolins",
+        "Nick Grant"
+      ],
       "location": "St Giles"
     },
     {
       "id": 3,
       "time": "09:55",
       "topic": "Strategic Update",
-      "speakers": ["Amit Thawani"],
+      "speakers": [
+        "Amit Thawani"
+      ],
       "location": "St Giles"
     },
     {
       "id": 4,
       "time": "10:25",
       "topic": "IVR Game",
-      "speakers": ["Nick Grant"],
+      "speakers": [
+        "Nick Grant"
+      ],
       "location": "St Giles"
     },
     {
       "id": 5,
       "time": "10:35",
       "topic": "GCOO Sustainability - Kettle v Logon",
-      "speakers": ["Derek Shanks", "Iain Frame"],
+      "speakers": [
+        "Derek Shanks",
+        "Iain Frame"
+      ],
       "location": "St Giles"
     },
     {
@@ -197,28 +215,38 @@
       "id": 7,
       "time": "11:20",
       "topic": "Strategic Update",
-      "speakers": ["Amit Thawani"],
+      "speakers": [
+        "Amit Thawani"
+      ],
       "location": "St Giles"
     },
     {
       "id": 8,
       "time": "11:55",
       "topic": "IVR Game",
-      "speakers": ["Nick Grant", "Rose Ulldemolins"],
+      "speakers": [
+        "Nick Grant",
+        "Rose Ulldemolins"
+      ],
       "location": "St Giles"
     },
     {
       "id": 9,
       "time": "12:05",
       "topic": "Quantum Computing",
-      "speakers": ["Professor Simon Gay, University of Glasgow"],
+      "speakers": [
+        "Professor Simon Gay, University of Glasgow"
+      ],
       "location": "St Giles"
     },
     {
       "id": 10,
       "time": "12:50",
       "topic": "Continuing the People Adventure",
-      "speakers": ["Rose Ulldemolins", "Nick Grant"],
+      "speakers": [
+        "Rose Ulldemolins",
+        "Nick Grant"
+      ],
       "location": "St Giles"
     },
     {
@@ -232,14 +260,18 @@
       "id": 12,
       "time": "13:45",
       "topic": "Transition to Dunedin for Expo",
-      "speakers": ["All"],
+      "speakers": [
+        "All"
+      ],
       "location": "Dunedin"
     },
     {
       "id": 13,
       "time": "13:50",
       "topic": "Waterfront Expo",
-      "speakers": ["Waterfront Various Colleagues"],
+      "speakers": [
+        "Waterfront Various Colleagues"
+      ],
       "location": "Dunedin"
     },
     {
@@ -253,59 +285,65 @@
       "id": 15,
       "time": "14:50",
       "topic": "Waterfront Expo",
-      "speakers": ["Waterfront Various Colleagues"],
+      "speakers": [
+        "Waterfront Various Colleagues"
+      ],
       "location": "Dunedin"
     },
     {
       "id": 16,
       "time": "15:40",
       "topic": "Transition back to St Giles from Expo",
-      "speakers": ["All"],
+      "speakers": [
+        "All"
+      ],
       "location": "St Giles"
     },
     {
       "id": 17,
       "time": "15:45",
       "topic": "Results of People Adventure and IVR Game",
-      "speakers": ["Rose Ulldemolins", "Nick Grant"],
+      "speakers": [
+        "Rose Ulldemolins",
+        "Nick Grant"
+      ],
       "location": "St Giles"
     },
     {
       "id": 18,
       "time": "15:55",
       "topic": "Agentic AI",
-      "speakers": ["Aritra Chakravarty"],
+      "speakers": [
+        "Aritra Chakravarty"
+      ],
       "location": "St Giles"
     },
     {
       "id": 19,
       "time": "16:55",
       "topic": "Close",
-      "speakers": ["Amit Thawani", "Derek Shanks"],
+      "speakers": [
+        "Amit Thawani",
+        "Derek Shanks"
+      ],
       "location": "St Giles"
     },
     {
       "id": 20,
       "time": "17:00",
       "topic": "Social",
-      "speakers": [""],
+      "speakers": [
+        ""
+      ],
       "location": "Canongate"
     }
   ],
   "jammers": [
     {
       "welcome": "Hello Jammers! 👋",
-      "welcomeDescription": "Here are some details of what to expect on the day. We can't wait to see what you create!",
+      "welcomeDescription": "Here are some details about what you will be doing at the game jam. We can't wait to see what you create!",
       "challengeTitle": "The Challenge",
-      "challengeDescription": "Your team will create a game based on a theme that will be announced at the start of the Game Jam. You can use any tools or technology you like.",
-      "internalColleagues": "For internal employee teams",
-      "challengeInternal": "Make learning about what Scottish Widows offers engaging and interactive by using games or gamification to captivate the right generation at the right time.",
-      "challengeInternalDescriptor": "On the 3rd March you'll be randomly given one of the following topics:",
-      "internalTopics": " • Investments\n • Budgeting and Finance Essentials\n • Life Insurance or Critical Illness\n • Insurance - Pet, Car or Home\n • Building Your Pension \n • Accessing your Pension",
-      "externalColleagues": "For external student teams",
-      "challengeExternal": "Make a 'Game for Good' to help tackle something that matters to you. Choose from : ",
-      "externalTopics": " • Social Justice, Inclusion and Equality\n • Skills and Talent Development\n • Environment and Climate Change",
-      "externalDescriptor": "We'd love to work together to bring these ideas to life alongside the Scottish Tech Army and really make a difference.",
+      "challengeDescription": "Create a game or gamified journey to help close the gender gap in pensions and investments.",
       "judgingTitle": "Judging Criteria",
       "judgingDescription": "Our judges will be considering the following when casting their vote: ",
       "judgingCriteria": {
@@ -334,30 +372,28 @@
       },
       "Pitches": {
         "title": "Pitches",
-        "description": "All teams will have the opportunity to give a 5 minute pitch of their game to the judges.",
-        "time": "Pitches will start at 3:20pm in the :",
-        "locationInternal": "Robertson Learning Studio",
-        "locationExternal": "Weston Learning Studio",
-        "presentation": "You can use slides, a live demo, or any other format you like to present your game. Be creative and have fun!"
+        "description": "On day two, all teams will pitch their game to their assigned coaches. Coaches will then shortlist teams to present to our judging panel.",
+        "length": "Each pitch should be 8 minutes, with an additional 2 minutes for questions.",
+        "presentation": "You can use slides, a live demo, or any other format you like to present your game. Be creative and have fun!",
+        "coachTime": "Pitches to the coaches will begin at 12:30pm",
+        "judgeTime": "Pitches to the judges will begin at 2:00pm"
       },
       "Awards": {
         "awards": [
           {
-            "title": "🥇 1st Prize\n(Judge's Choice)",
+            "title": "🥇 1st Place",
             "prizes": {
-              "all": "A team mystery Geek Crate with 10 - 15 items and :",
-              "Internal": " Microsoft Innovation Hub visit.",
-              "External": "Game Maker License for each team member."
+              "all": "You will be invited to LBG to bring your idea to life in the Scottish Widows App.\n\n Each team member will receive 1-2-1 mentorship from a Women ConnecTech mentor.\n\n Plus tickets to our Reboot conference in November."
             }
           },
           {
-            "title": "🥈 2nd Prize\n(Audience Choice)",
+            "title": "🥈 2nd Place",
             "prizes": {
               "all": "A team mystery Geek Crate with 10 - 15 items."
             }
           },
           {
-            "title": "🥉 3rd Prize\n(Judge's Choice)",
+            "title": "🥉 3rd Place",
             "prizes": {
               "all": "A team mystery Geek Crate with 6 - 10 items."
             }
@@ -576,52 +612,6 @@
     },
     {
       "id": "topic2",
-      "title": "Budgeting and Financial Essentials",
-      "links": [
-        {
-          "title": "Budgeting",
-          "link": "https://www.scottishwidowsbemoneywell.co.uk/financial-essentials/budgeting.html"
-        },
-        {
-          "title": "Scottish Widows Be Money Well",
-          "link": "https://www.scottishwidowsbemoneywell.co.uk/financial-essentials.html"
-        },
-        {
-          "title": "Teaching Children About Money",
-          "link": "https://www.lloydsbank.com/help-guidance/family-finances/teaching-children-about-money.html"
-        },
-        {
-          "title": "Budget Calculator",
-          "link": "https://www.lloydsbank.com/help-guidance/support-and-wellbeing/managing-your-money/budget-calculator.html"
-        }
-      ]
-    },
-    {
-      "id": "topic3",
-      "title": "Life Insurance or Critical Illness",
-      "links": [
-        {
-          "title": "Life Insurance",
-          "link": "https://www.scottishwidows.co.uk/life-insurance.html"
-        },
-        {
-          "title": "Critical Illness",
-          "link": "https://www.scottishwidows.co.uk/life-insurance/critical-illness-cover.html"
-        }
-      ]
-    },
-    {
-      "id": "topic4",
-      "title": "Insurance - Pet, Car or Home",
-      "links": [
-        {
-          "title": "Insurance Quotes in Minutes",
-          "link": "https://www.lloydsbank.com/insurance.html"
-        }
-      ]
-    },
-    {
-      "id": "topic5",
       "title": "Building Your Pension",
       "links": [
         {
@@ -639,7 +629,7 @@
       ]
     },
     {
-      "id": "topic6",
+      "id": "topic3",
       "title": "Accessing Your Pension",
       "links": [
         {

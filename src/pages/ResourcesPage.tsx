@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { SetStateAction, useState } from "react";
 import data from "../db.json";
-import { pageContainerStyles, Paragraph, Heading } from "../styles/sharedStyles";
+import { Heading, pageContainerStyles, Paragraph } from "../styles/sharedStyles";
 
 export default function ResourcesPage() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -68,7 +68,7 @@ export default function ResourcesPage() {
           <TemplateSection>
             <SubTitle>Template Repo</SubTitle>
             <Paragraph>
-              The Game Jam Dundee team have put together a{" "}
+              We have put together a{" "}
               <strong>template Github repo </strong>
               to help you get started!{" "}
             </Paragraph>
@@ -84,10 +84,9 @@ export default function ResourcesPage() {
         </Section>
 
         <Section>
-          <SubTitle>Topics</SubTitle>
+          <SubTitle>Investments & Pensions</SubTitle>
           <Paragraph>
-            Your team will be given a random finance-related topic from the list
-            below.
+            Here are some useful links and resources to help you learn more about pensions and investments.
           </Paragraph>
           <TopicsGrid>
             {data.topics.map((topic, index) => (
@@ -211,7 +210,7 @@ const TemplateSection = styled.div`
 const TemplateRepoButton = styled.a`
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: ${({ theme }) => theme.colors.lilacShade};
+  background-color: ${({ theme }) => theme.colors.lavenderPurple};
   color: white;
   font-size: 1.2rem;
   font-weight: 400;
@@ -222,7 +221,7 @@ const TemplateRepoButton = styled.a`
   transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.lilacShade};
+    background-color: ${({ theme }) => theme.colors.lavenderPurple};
     transform: translateY(-3px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
   }
@@ -278,7 +277,7 @@ const Resource = styled.div`
 const ResourceTitle = styled.a`
   margin: 0;
   font-size: 1.3rem;
-  color: ${({ theme }) => theme.colors.lilacShade};
+  color: ${({ theme }) => theme.colors.lavenderPurple};
   text-decoration: none;
 
   &:hover {
@@ -383,7 +382,7 @@ const LinkItem = styled.p`
   font-size: 1.3rem;
 
   a {
-    color: ${({ theme }) => theme.colors.lilacShade};
+    color: ${({ theme }) => theme.colors.lavenderPurple};
     text-decoration: none;
 
     &:hover {
@@ -393,7 +392,7 @@ const LinkItem = styled.p`
 `;
 
 const Link = styled.a`
-  color: ${({ theme }) => theme.colors.lilacShade};
+  color: ${({ theme }) => theme.colors.lavenderPurple};
   text-decoration: none;
 
   &:hover {
@@ -406,7 +405,7 @@ const Tutorial = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem 1.2rem;
-  border: 1px solid ${({ theme }) => theme.colors.lilacShade};
+  border: 1px solid ${({ theme }) => theme.colors.lavenderPurple};
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   margin-bottom: 1rem;
