@@ -399,6 +399,10 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   animation-fill-mode: backwards;
   text-align: left;
 
+  @media (max-width: ${({theme:t})=>t.breakpoints.md}) {
+    margomn-bottom: 0;
+  }
+
   .welcome {
     display: block;
       color: ${({theme:t})=>t.colors.turquoise};
