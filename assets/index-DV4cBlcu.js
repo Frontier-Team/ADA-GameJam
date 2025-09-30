@@ -483,7 +483,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   top: 100%;
   left: 0;
   margin-top: 0.5rem;
-  background: #fff;
+  background: ${({theme:t})=>t.colors.white};
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
@@ -491,7 +491,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   z-index: 50;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(-4px);
+  transform: translateY(-0.25rem);
   transition: opacity 150ms ease, transform 150ms ease, visibility 150ms ease;
 
   &[data-open='true'] {
@@ -501,23 +501,17 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   }
 
   @media (max-width: 480px) {
-    left: 50%;
-    transform: translate(-50%, -4px);
-    width: calc(100vw - 2rem);
-    max-width: 420px;
+    position: fixed;
+    top: 1rem;
+    left: 10%;
+    transform: translate(-50%, 0);
+
+    max-width: none;
   }
 `,kS=U.span`
   position: relative;
   display: inline-block;
   cursor: pointer;
-
-  /* Use id-based selector to avoid Emotion component selector which needs babel plugin */
-  &:hover #map-popover,
-  &:focus-within #map-popover {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
 
   strong {
     text-decoration: underline;
@@ -538,7 +532,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   &:focus {
     outline: 2px solid ${({theme:t})=>t.colors.teal};
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: 0.25rem;
   }
 `,PS=U.div`
   display: flex;
