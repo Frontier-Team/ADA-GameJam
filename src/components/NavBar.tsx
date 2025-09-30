@@ -48,7 +48,7 @@ export const NavBar: React.FC = () => {
   }, []);
 
 const links = [
-  // { to: "/schedule", label: "Schedule" },
+  { to: "/schedule", label: "Schedule" },
   { to: "/jammers", label: "Game Jam" },
   { to: "/resources", label: "Resources" },
   { to: "/conduct", label: "Conduct" },
