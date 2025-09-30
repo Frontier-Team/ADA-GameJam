@@ -365,6 +365,9 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 36px 0px,
     rgba(0, 128, 128, 0.2) 0px 0px 0px 1px;
   position: relative;
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
 
   @media (max-width: 1300px) {
     margin-top: 0;
