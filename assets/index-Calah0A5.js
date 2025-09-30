@@ -465,6 +465,7 @@ Please change the parent <Route path="${D}"> to <Route path="${D==="/"?"*":`${D}
   @media (max-width: 1300px) {
     margin-top: 0;
     padding: 0;
+
   }
 
   p {
